@@ -46,7 +46,7 @@ const App = () => {
     <Box bg="teal.600" color="white" height="100vh" paddingTop={130}>
       <Container maxW="3xl" centerContent>
         <Header />
-        <TextInput color="teal.300" extractKeywords={extractKeywords} />
+        <TextInput extractKeywords={extractKeywords} />
       </Container>
       <KeywordsModal
         keywords={keywords}
