@@ -10,7 +10,9 @@ import {
   ModalCloseButton,
   CircularProgress,
 } from "@chakra-ui/react";
+import search from "../assets/file-searching.json";
 import React from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
 
 const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
   return (
@@ -22,7 +24,15 @@ const KeywordsModal = ({ keywords, loading, isOpen, closeModal }) => {
           <ModalCloseButton />
           <ModalBody display="flex" alignItems="center" justifyContent="center">
             {loading ? (
-              <CircularProgress isIndeterminate color="blue.300" />
+              <Player
+                src={search}
+                background="transparent"
+                speed="1"
+                style={{ width: "5em", height: "5em" }}
+                loop
+                controls
+                autoplay
+              />
             ) : (
               <Text>{keywords}</Text>
             )}
